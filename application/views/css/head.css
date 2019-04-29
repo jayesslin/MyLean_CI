@@ -1,0 +1,27 @@
+ul.head{
+    /* text-align:center;*/
+    width: 85%;
+    display:inline-block;
+    text-align: right;
+    margin-bottom: 25px;
+
+}
+li.head {
+         display:inline-block;;
+         padding: 7px;
+}
+#pichead{
+    width:300px;padding-left: 85px; float:left;margin-right:-200px;
+
+}
+#ulhead{
+    width:700px;margin-left:-100px; float:right;
+}
+.nav{
+    font-weight: bold;
+}
+/*
+div.main{}
+div.left{ width:300px;padding-left: 50px; float:left;margin-right:-200px; }
+div.mid{ width:auto;margin:0 220px;}
+div.right{ }width:700px;margin-left:-200px; float:right;*/

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Registration 2</title>
+
+   <link href="css/reset.css" rel="stylesheet">
+   <link href="css/assign1.css" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+    <div id="topHeaderRow" >
+        <nav >
+            <ul >
+                <li><a href="pageTwo.html"> Login</a></li>
+                <li><a href="#"> Wish List</a></li>
+                <li><a href="#"> Shopping Cart</a></li>
+                <li><a href="#"> Checkout</a></li>                  
+            </ul>
+        </nav>
+   </div>   <!-- end topHeaderRow -->
+   
+   <div id="logoRow" >
+        <h1>Art Store</h1> 
+   </div>  <!-- end logoRow -->
+   
+   <div id="mainNavigationRow" >
+         <nav >
+             <ul >
+               <li ><a href="pageOne.php">Home</a></li>
+               <li><a href="#">About Us</a></li>
+               <li><a href="#">Art Works</a></li>
+               <li><a href="#">Artists</a></li>
+             </ul>              
+
+         </nav>
+   </div>  <!-- end mainNavigationRow -->
+   
+</header>
+
+<main>
+   <h2>Artist Registration</h2>
+   <form method="post" onsubmit="return check();" action="Validateform.php">
+   
+      <h3>1. User Info</h3>
+      <table class="userform">
+         <tr>
+            <td><label>First Name</label><br><input placeholder="First name" required type="text" name="first" size="20"></td>
+            <td><label>Last Name</label><br><input placeholder="Last name" required type="text" name="last" size="22"></td>
+         </tr>
+         <tr>
+            <td colspan="3">
+               <label>Email</label><br><input placeholder="format for email is xxx@yyy.zzz" required type="email" id="email" name="email" size="60" >
+            </td>
+         </tr>
+         <tr>
+            <td><label>Password</label><br><input placeholder="at least 8 characters" required type="password" id="password" name="pass1" size="20" ></td>
+            <td><label>Password Repeat</label><br><input placeholder="at least 8 characters" required type="password" name="pass2" size="20"></td>
+         </tr>         
+      </table>
+      
+      <h3>2. Location</h3>
+      <table class="userform">
+         <tr>
+            <td colspan="3">
+               <label>Address</label><br><input placeholder="Address" required type="text" name="address" size="60">
+            </td>
+         </tr>
+         <tr>
+            <td><label>City</label><br><input placeholder="city" required type="text" name="city" size="20"></td>
+            <td><label>State</label><br><input placeholder="state" required type="text" name="state" size="4"></td>
+            <td><label>Zip</label><br><input required placeholder="Zip" type="text" name="zip" size="10"></td>
+         </tr>   
+         <tr>
+            <td>
+               <label>Phone</label><br><input placeholder="NNN-NNN-NNNN" required type="tel" id="phone" name="phone" size="20" >
+            </td>
+            <td colspan="2">
+               <label>Country</label><br>
+               <select required name="country">
+                  <option>Canada</option>
+                  <option>Denmark</option>
+                  <option>France</option>
+                  <option>United States</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <label>Continent</label><br>
+               <input   required  type="radio" name="continent" value="1">North America<br>
+               <input  required  type="radio" name="continent" value="2">Europe<br>
+               <input  required  type="radio" name="continent" value="3">South America<br>
+            </td>
+         </tr>
+      </table>    
+
+      <h3>3. Personal Details</h3>
+      <table class="userform">
+         <tr>
+          <td><label>Nationality</label><br><input   required placeholder="Nationality" required type="text" name="nationality" size="20"></td>
+           
+            <td><label>Death Date</label><br><input  required  type="date" name="birthdate" ></td>
+            <td><label>Details</label><br><textarea required rows="10" cols=30" name="details" >Be always Nice</textarea></td>
+         </tr>
+         <tr>
+            <td colspan="3">
+               <label>Link</label><input placeholder="your link"type="url" name="link"  >Love it!
+            </td>
+         </tr>
+      </table>
+      
+      <h3>4. All Done</h3>
+      <table class="userform">
+         <tr>
+            <td colspan="3">
+               <input  required  type="checkbox" name="accept">
+               <label>I agree to the <a href="#">Terms of the Site</a></label>               
+            </td>
+         </tr>
+         <tr>
+            <td colspan="3">
+               <button type="submit" class="fancyBtn" >
+                  <img src="images/button_ok.png"> Sign me up!
+               </button>
+            </td>
+         </tr>       
+      </table>      
+   </form>
+</main>
+<footer>
+       <p>All images are copyright to their owners. This is just a hypothetical site
+       <span >&copy; 2019 Copyright Art Store</span></p>
+</footer>
+
+
+  </body>
+</html>
+<script>
+function check(){
+/*var email = document.getElementsByName("email");
+*/      var email = document.getElementById("email");
+var password1= document.getElementById("password");
+var phone = document.getElementById("phone");
+
+//check email
+var emailReg = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+/*!/(.+)@([^\.].*)\.([a-z]{2,})/;*/
+if(!emailReg.test(email.value)){
+
+alert("wrong email:   "+email.value);
+return false;
+}
+//check password
+var passwordReg = /^[a-zA-Z]\w{8,16}$/ ;
+if(!passwordReg.test(password1.value)){
+alert("wrong passwrod: "+password1.value);
+return false;
+}
+// check phone
+var phoneReg = /^\(?(?:\d{3})\)?[.-]?\d{3}[.-]?(?:\d{4})$/;
+if(!phoneReg.test(phone.value)){
+alert("wrong phone");
+return false;
+}
+}
+</script>

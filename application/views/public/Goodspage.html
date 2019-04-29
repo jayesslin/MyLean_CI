@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buy from us </title>
+</head>
+<body>
+<!--header file load-->
+<div class="header"></div>
+<!--header file load over-->
+
+<!--pic1-->
+<div style="height: 200px;">
+    <div class="pic1">
+        <div style="padding: 40px 18% 40px 18%; text-align: center">
+            <p style="font-size:2.2em;font-family: Roboto;color: #333333">COMPRAR</p>
+            <p style="font-size:1.5em;text-align: center" ><a href="Homepage.html">Inicio</a> &nbsp;&nbsp;  COMPRAR BOLETOS</p>
+        </div>
+    </div>
+</div>
+
+<!--text are   with line -->
+<div style="height: 300px">
+    <!--draw a line!!!!!!-->
+    <div style="text-align: center;padding-top:30px;padding-bottom:0px ">
+        <hr style="vertical-align:middle;margin:8px;width:100px;height:1px;border:0px;background-color:#FFC300;color:#FFC300;display: inline-block"/>
+        <h1 style="display: inline-block"> NUESTROS EVENTOS</h1>
+        <hr style="vertical-align:middle;margin:8px;width:100px;height:1px;border:0px;background-color:#FFC300;color:#FFC300;display: inline-block"/>
+    </div>
+    <p style="font-size:1.2em; text-align: center;padding: 0px 20% 0px 20%">Tu asistencia es importante para nosotros visitanos en los eventos qu estamos realizando.
+    </p>
+</div>
+<!--subscribe-->
+<div class="subscribe" style="position: relative"></div>
+
+
+<!--footer file load-->
+<div class="footer" style="position: relative"></div>
+<!--footer file load over-->
+
+</body>
+<style>
+    div.pic1 {
+        /* height: auto; width: auto\9; width:100%;*/
+        background: url("./pic/goodsbg1.jpg")no-repeat;
+        width:99%;
+        height:200px;
+        background-size:100% 100%;
+        position:absolute;
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg-login.png'/*,sizingMethod='scale'*/);
+    }
+</style>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    $(function(){
+        /*公共部分
+         * 导航栏
+         * footer CopyRight
+         */
+        /*$(".header").load("headerpage.html");
+        $(".footer").load("footerpage.html");*/
+        $(".header").load("head.html");
+        $(".footer").load("foot.html");
+        $(".subscribe").load("subscribebox.html");
+    });
+    $(document.body).css({
+        "overflow-x":"hidden",
+        /*"overflow-y":"hidden"*/
+    });
+</script>
+</html>

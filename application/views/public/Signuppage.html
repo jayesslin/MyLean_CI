@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+
+</head>
+<body>
+<!--header file load-->
+<div class="header"></div>
+<!--header file load over-->
+
+
+<div style="height:300px; ">
+    <div class="pic1">
+        <div style="padding: 100px 18% 40px 18%; text-align: center">
+            <p style="font-size:2.2em;font-family: Roboto;color: #333333">REGISTRATE</p>
+            <p style="font-size:1.5em;text-align: center" ><a href="Homepage.html">INICIO</a>   &nbsp;&nbsp;  REGISTRATE</p>
+        </div>
+    </div>
+</div>
+
+<div style="width: 100%;">
+    <table style="width: 60%; height: 150px;margin: 100px 20% 180px 20%;background-color:#C0C0C0 ">
+
+        <th colspan="2" style="text-align:left;font-family:Roboto;font-size:1.5em;padding-left:20px;padding-top:10px;margin-bottom: 20px">Elija el tipo de usuario para registrarse</th>
+        <tr style="text-align: center">
+            <td style="width: 33% ; ">
+                <div style="font-family:Roboto;padding-left:20px;">
+                    <button type="submit"  onclick="Show(), changeT(1),Showp_individual()" class="button"> &nbsp Como individual &nbsp</button>
+                </div>
+            </td>
+            <td style="width: 33% ;">
+                <div style="font-family:Roboto;padding-left:20px;">
+                    <button type="submit"   onclick="Show(), changeT(2), ShowB(),Showp_bussiness()"class="button">&nbsp  Como Negocio o Fundacion &nbsp </button>
+                </div>
+            </td>
+            <td style="width: 33%;">
+                <div style="font-family:Roboto;padding-left:20px;">
+                    <button type="submit"  onclick="Show(), changeT(3) ,Showp_agent();" class="button">&nbsp Como agente LEAN &nbsp</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!--删除了一些ID， 想想怎么分块显示-->
+
+<div id="shadea" class="c1 hide"></div>
+<div id="modala" class="c2 hide" >
+    <!--<form method="post"  action="controller/user_regi.php" onsubmit="return regi()">-->
+    <form method="post" id="form1" name="form1"action="##" onsubmit="return false">
+
+        <!--<input id = "type" name="type" class="hide" value="1">-->
+        <table style="padding-left: 20px;">
+            <tr>
+                <td><h2>Registro <span class="hide" id="p_individual">Individual</span><span class="hide"id="p_bussiness">Noegocio o Fundacion</span><span class="hide" id="p_agent">de Agente LEAN</span></h2></td>
+
+                <td><p id="a" style="color: red"></p></td>
+            </tr>
+            <tr><td colspan="2"><hr/></td></tr>
+
+            <tr style="margin:0px 3px 3px 3px">
+                <td><h2>Correo</h2></td>
+                <td><h2>Contraseña</h2></td>
+            </tr>
+            <tr style="margin-bottom: 10px">
+                <td><input required type="email" id="email"name="email"  placeholder=" Correo"  style="width:90%;height:35px;font-family: Roboto;"></td>
+                <td><input required type="password" name="password" id="password"  placeholder=" Contraseña"  style="width:90%;height:35px;font-family: Roboto;"></td>
+            </tr>
+            <tr style="margin:6px">
+                <td><h2>Nombre</h2></td>
+                <td><h2>Apellido</h2></td>
+            </tr>
+            <tr style="margin-bottom: 15px">
+                <td><input required type="text" name="firstname" id="firstname" placeholder=" Nombre"  style="width:90%;height:35px;font-family: Roboto;"></td>
+                <td><input  required type="text"  name="lastname" id="lastname" placeholder=" Apellido"  style="width:90%;height:35px;font-family: Roboto;"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <h2>Dirección</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input required type="text"  name="address" id="address" placeholder=" Dirección"  style="width:98%;height:35px;font-family: Roboto;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Ciudad</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input required type="text"  name="county" id="county" placeholder=" Ciudad"  style="width:98%;height:35px;font-family: Roboto;">
+                </td>
+            </tr>
+            <!--we can use JQuery plugin to fullfill all contry-->
+
+
+            <tr>
+                <td>
+                    <h2>Estado</h2>
+                </td>
+                <td>
+                    <h2>Código Postal</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="country" id="country" style="width: 315px; height: 43px;display: inline">
+                        <option value="CN" title="CN" >China</option>
+                        <option value="US" title="US" >America</option>
+                        <option value="ES" title="ES" >Spain</option>
+                        <option value="IN" title="IN" >India</option>
+                    </select>
+                </td>
+                <td>
+                    <input  required type="text"  name="zipcode" id="zipcode" placeholder=" "  style="width:90%;;height:35px;font-family: Roboto;">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div id="BusinessType" class="hide" style="margin-top: 8px; text-align: center">
+                        <label>
+                            <input style="margin: 8px 20px 0px 20px" type="radio" name="applicationSystem" value="1" checked>Tipo de negocio1</label>
+                        <label>
+                            <input style="margin: 8px 20px 0px 20px" type="radio" name="applicationSystem" value="2">Tipo de negocio2</label>
+                        <label>
+                            <input style="margin: 8px 20px 0px 20px" type="radio" name="applicationSystem" value="3">Tipo de negocio3</label>
+
+                    </div>
+                </td>
+            </tr>
+
+            <!-- <button type="submit" style="margin-top: 20px" class="button" onclick="regi()"> &nbsp; Registrarse &nbsp;</button>-->
+            <tr>
+                <td>
+                    <button type="submit" style="margin-top: 3px" class="button" onclick="insert()"> &nbsp; Registrarse &nbsp;</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <button type="reset" onclick="Hide(),HideB(),HideALL_para();" style=" float:right;margin-top: 6px;  cursor:pointer;border:none;height:30px; border-radius:15px;"> &nbsp; Cerrar &nbsp;</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<!--footer file load-->
+<div class="footer" style="position: relative"></div>
+<!--footer file load over-->
+
+</body>
+<style>
+
+    div.pic1 {
+        /* height: auto; width: auto\9; width:100%;*/
+        background: url("./pic/signupbg1.jpg")no-repeat;
+        width:99%;
+        height:300px;
+        background-size:100% 100%;
+        position:absolute;
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg-login.png'/*,sizingMethod='scale'*/);
+    }
+    .button{
+        cursor:pointer;border:none;height:30px;color: white;background-color: #FFC300; border-radius:15px;
+    }
+    .hide{
+        display: none;
+    }
+    .c1{
+        position: fixed;
+        top:0;
+        bottom: 0;
+        left:0;
+        right: 0;
+        background: rgba(0,0,0,.5);
+        z-index: 2;
+    }
+    .c2{
+        background-color: white;
+        position: absolute;
+        width: 520px;
+        height: 670px;
+        top:25%;
+        left: 45%;
+        z-index: 3;
+        margin-top: -150px;
+        margin-left: -200px;
+        border-radius: 6px;
+    }
+</style>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    window.TT;
+    function changeT(para){
+        TT=para;
+    }
+    $(document.body).css({
+        "overflow-x":"hidden",
+        /*"overflow-y":"hidden"*/
+    });
+    function Show(){
+        document.getElementById('shadea').classList.remove('hide');
+        document.getElementById('modala').classList.remove('hide');
+    }
+    function Hide(){
+        document.getElementById('shadea').classList.add('hide');
+        document.getElementById('modala').classList.add('hide');
+    }
+    function ShowB(){
+        document.getElementById('BusinessType').classList.remove('hide');
+        document.getElementById('BusinessType').classList.remove('hide');
+    }
+    function HideB(){
+        document.getElementById('BusinessType').classList.add('hide');
+        document.getElementById('BusinessType').classList.add('hide');
+    }
+    function Showp_individual(){
+        document.getElementById('p_individual').classList.remove('hide');
+        document.getElementById('p_individual').classList.remove('hide');
+    }
+    function Showp_bussiness(){
+        document.getElementById('p_bussiness').classList.remove('hide');
+        document.getElementById('p_bussiness').classList.remove('hide');
+    }
+    function Showp_agent(){
+        document.getElementById('p_agent').classList.remove('hide');
+        document.getElementById('p_agent').classList.remove('hide');
+    }
+    function HideALL_para(){
+        document.getElementById('p_individual').classList.add('hide');
+        document.getElementById('p_bussiness').classList.add('hide');
+        document.getElementById('p_agent').classList.add('hide');
+    }
+
+</script>
+<script src="js/head-foot.js"></script>
+
+
+
+<script>
+
+    function insert() {
+
+        var email = $("input[name='email']").val()
+        var password = $("input[name='password']").val();
+        var firstname = $("input[name='firstname']").val();
+        var lastname = $("input[name='lastname']").val();
+        var address= $("input[name='address']").val();
+        var county = $("input[name='county']").val();
+        var country=$("select[name='country']").val();
+        var zipcode = $("input[name='zipcode']").val();
+
+        var reg = new RegExp("(^[\\w.\\-]+@(?:[a-z0-9]+(?:-[a-z0-9]+)*\\.)+[a-z]{2,3}$)");
+
+
+        if(email==""||firstname==""||lastname==""||password==""||address==""||county==""||zipcode=="")
+        {document.getElementById("a").innerHTML="Please fill all fields";
+
+            return false;}
+        if(!reg.test(email))
+            {document.getElementById("a").innerHTML="Your E-mail format is not correct";
+                /* ^[\w.\-]+@(?:[a-z0-9]+(?:-[a-z0-9]+)*\.)+[a-z]{2,3}$*/
+                return false;}
+        if(password.length > 16 || password.length < 6){
+            document.getElementById("a").innerHTML="Password length should be between 6-16 digits ";
+
+            return false;
+        }
+        $.ajax({
+            type: "POST",
+            url: "./controller/registrationcontroller.php" ,
+            data: $('#form1').serialize()+"&type="+TT,
+            success: function (data) {
+                console.log(data);
+                if(data==false){
+                    document.getElementById("a").innerHTML="Failed,email exist!";
+                }else {
+                    document.getElementById("a").innerHTML="Success ";
+                    window.location.href="Login.php";
+                }
+            },
+            error : function(data) {
+            }
+        });
+    }
+</script>
+</html>

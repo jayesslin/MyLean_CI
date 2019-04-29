@@ -1,0 +1,192 @@
+p{
+    font-size: .70em;
+    font-weight: bold;
+    font-family: Roboto;
+    text-align: center;
+    color: #595959;
+}
+h1{
+    line-height: 200%;
+    font-family: Roboto;
+}
+h2{
+    font-family: Roboto;
+}
+a{
+    cursor:pointer;
+}
+a:link/*,a:visited*/
+{
+    text-decoration:none;
+    Vertical-align:bottom;
+    color:  #595959;
+}
+a:hover{
+    color:#FFC300;
+}
+head{
+    font-family: Roboto;
+    background-color: #595959;
+}
+body{
+    font-size: .70em;
+    background-color: #FFFFFF;
+
+}
+input::-webkit-input-placeholder {
+    color: #595959;
+    font-size: 12px;
+    font-family: Roboto;
+}
+input:focus, textarea:focus, button:focus {
+    outline: none;
+}
+#wrapper{
+ padding: 0 10% 0 10%;
+}
+.common_button{
+     cursor:pointer;width:60px;border:none;height:30px;color: white;background-color: #FFC300; border-radius:15px;
+ }
+
+@media screen and (max-width: 1280px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}
+    body {font:normal 100% Roboto,sans-serif; font-size:0.3rem; }
+    p {font:normal 100% Roboto,sans-serif;font-size:0.3rem; }
+    h1 {font:normal 100% Roboto,sans-serif; font-size:0.6rem; }
+    b{font:normal 100% Roboto,sans-serif;font-size:0.3rem;}
+    a{font:normal 100% Roboto,sans-serif;font-size:0.3rem;}
+    img{
+        max-width: 100%;
+        max-height: 50%;
+    }
+    .background1{
+        height: 160px;
+    }
+    div.pic1{
+        height: 160px; ;
+    }
+    input.login{
+        width: 18rem;
+        font-size:0.6rem ;
+    }
+    .goods{
+        width: 30rem;
+    }
+    input.sub_maill_input{
+        width: 8em;
+        font-size:0.3rem ;
+        value:"";
+
+    }
+    input.sub_maill_button{
+        width: 5rem;
+        font-size:0.3rem ;
+        value:"";
+    }
+    .sub_maill_input input::-webkit-input-placeholder {
+        /* placeholder颜色  */
+
+        /* placeholder字体大小  */
+        font-size: 0.5rem;
+    }
+    .limi_img{ width:7rem; height:15rem}
+    .limi_img img{width:7rem; height:15rem}
+}
+/*phone!*/
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+    body {font:normal 100% Roboto,sans-serif; font-size:0.3rem; }
+    p {font:normal 100% Roboto,sans-serif;font-size:0.3rem; }
+    h1 {font:normal 100% Roboto,sans-serif; font-size:0.6rem; }
+    b{font:normal 100% Roboto,sans-serif;font-size:0.3rem;}
+    a{font:normal 100% Roboto,sans-serif;font-size:0.5rem;}
+    h2 {font:normal 100% Roboto,sans-serif; font-size:0.4rem; }
+    img{
+        max-width: 100%;
+        max-height: 50%;
+    }
+    .background_long{
+        height: 250px;
+    }
+    .background_short{
+        height: 130px;
+    }
+    div.pic1{
+        height: 160px; ;
+    }
+    input.sub_maill_input{
+        width: 2.1rem;
+        font-size:0.3rem ;
+        value:"";
+
+    }
+    input.sub_maill_button{
+        width: 2.0rem;
+        font-size:0.3rem ;
+        value:"";
+    }
+    input.login{
+        width: 10rem;
+        font-size:0.3rem ;
+    }
+    button{
+        font-size: 0.35rem;
+
+    }
+    th{
+        font-size: 0.6rem;
+    }
+    .goods{
+        width: 20rem;
+    }
+    .limi_img{ width:4rem; height:12rem}
+    .limi_img img{width:4rem; height:12rem}
+}
+/*mini*/
+@media screen and (max-width: 320px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+    body {font:normal 100% Roboto,sans-serif; font-size:0.3rem; }
+    p {font:normal 100% Roboto,sans-serif;font-size:0.3rem; }
+    h1 {font:normal 100% Roboto,sans-serif; font-size:0.6rem; }
+    h2 {font:normal 100% Roboto,sans-serif; font-size:0.4rem; }
+    b{font:normal 100% Roboto,sans-serif;font-size:0.3rem;}
+    a{font:normal 100% Roboto,sans-serif;font-size:0.5rem;}
+    img{
+        max-width: 100%;
+        max-height: 50%;
+    }
+    .background1{
+        height: 200px;
+    }
+    div.pic1{
+        height: 160px; ;
+    }
+    input.sub_maill_input{
+        width: 2.1rem;
+        font-size:0.3rem ;
+        value:"";
+
+    }
+    input.sub_maill_button{
+        width: 1.8rem;
+        font-size:0.3rem ;
+        value:"";
+    }
+    input.login{
+        width: 3.5rem;
+        font-size:0.3rem ;
+    }
+    button{
+
+        font-size: 0.3rem;
+    }
+    .goods{
+        width: 30rem;
+    }
+}
+
+
+
